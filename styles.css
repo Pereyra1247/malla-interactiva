@@ -1,1 +1,49 @@
+:root {
+  --bistre: #3F2B12;
+  --cafenoir: #4D3417;
+  --shadow: #8E795C;
+  --vanilla: #CEBCAB;
+  --almond: #ECDFCE;
+}
+
+body {
+  background: var(--almond);
+  color: var(--bistre);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.cell {
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--vanilla);
+  border: 2px solid var(--shadow);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.cell.locked {
+  background: var(--cafenoir);
+  color: var(--almond);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.cell.approved {
+  background: var(--bistre);
+  color: var(--almond);
+  box-shadow: 0 0 10px var(--bistre);
+}
 
